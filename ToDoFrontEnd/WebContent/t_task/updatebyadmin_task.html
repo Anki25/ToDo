@@ -1,0 +1,74 @@
+<div ng-controller="TaskController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div>
+
+<div ng-hide="currentUser==''">
+<div class="container" ng-controller="TaskController as ctrl">
+
+<h3 style="color:#CD2626;font-weight:bold;text-align:center;">Update User ToDo</h3><div class="formcontainer">
+
+<form ng-submit="ctrl.editbyadmin()" name="myForm" class="form-horizontal">
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-question-sign"></span></span>
+      <input id="task_id" type="text" class="form-control" placeholder="Task Id" ng-model="ctrl.task.task_id">
+    </div>
+    
+    <br/><br/>
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-question-sign"></span></span>
+      <input id="task_id" type="text" class="form-control" placeholder="User Id" ng-model="ctrl.task.user_id">
+    </div>
+    
+    <br/><br/>
+
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-question-sign"></span></span>
+      <input id="title" type="text" class="form-control" placeholder="Change the title of User ToDo" ng-model="ctrl.task.title">
+    </div>
+    
+    <br/><br/>
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-edit"></span></span>
+ <textarea id="description" type="text" class="form-control" placeholder="Change the desciption of User ToDo" ng-model="ctrl.task.description">
+   </textarea>
+    </div>
+    
+    <br/><br/>
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+  <input id="task_date" type="date" class="form-control" placeholder="When is it?" ng-model="ctrl.task.task_date">   </div>
+    
+    <br/><br/>
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-record"></span></span>
+      Status:
+      <label class="radio-inline">
+<input type="radio" name="status" value="Pending" ng-model="ctrl.task.status" checked>Pending
+</label>
+<label class="radio-inline">
+<input type="radio" name="status" value="Done" ng-model="ctrl.task.status">Done
+</label>
+
+    </div>
+    
+    <br/><br/>
+
+
+<div class="row">
+<div class="form-actions floatRight">
+<input type="submit" value="Update Task" class="btn btn-primary btn-sm">
+<button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm">Reset Form</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,31 @@
+ 
+<div class="container" ng-controller="UserController as ctrl">
+
+<form ng-submit="ctrl.login()" id="signin">
+
+<h3 style="color:#CD2626;font-weight:bold;text-align:center;">Sign In</h3>
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+      <input id="email" type="text" class="form-control" name="email" placeholder="Email" ng-model="ctrl.user.email">
+    </div>
+    
+    <br/><br/>
+    
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" name="password" placeholder="Password" ng-model="ctrl.user.password">
+    </div>
+ 
+ <br/><br/>
+ 
+  <div class="row">
+<div class="form-actions">
+<input type="submit" value="Sign In" class="btn btn-danger btn-block" id="button">
+</div>
+</div>
+</form>
+</div>
+
+
+<br/>

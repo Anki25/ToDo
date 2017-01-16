@@ -1,0 +1,50 @@
+<br/><br/>
+
+<div ng-controller="UserController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+
+<div ng-hide="currentUser==''">
+<div class="container" ng-controller="TaskController as ctrl">
+
+<form ng-submit="ctrl.submit()" id="create">
+
+<h3 style="color:#CD2626;font-weight:bold;text-align:center;">Add a new ToDo</h3>
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-question-sign"></span></span>
+      <input id="title" type="text" class="form-control" placeholder="What's your ToDo?" ng-model="ctrl.task.title">
+    </div>
+    
+    <br/><br/>
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-edit"></span></span>
+      <textarea id="description" type="text" class="form-control" placeholder="What is it about?" ng-model="ctrl.task.description">
+   </textarea> </div>
+    
+    <br/><br/>
+
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+      <input id="task_date" type="date" class="form-control" placeholder="When is it?" ng-model="ctrl.task.task_date">
+    </div>
+    
+    <br/><br/>
+
+
+
+<div class="row">
+<div class="form-actions floatRight">
+<input type="submit" value="Create Task" class="btn btn-primary btn-sm">
+<button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm">Reset Form</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/>

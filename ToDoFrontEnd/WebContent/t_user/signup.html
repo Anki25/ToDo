@@ -1,0 +1,63 @@
+
+<div class="container" ng-controller="UserController as ctrl">
+<div class="formcontainer">
+<form ng-submit="ctrl.submit()" name="myForm" id="signup">
+
+<h3 style="color:#CD2626;font-weight:bold;text-align:center;">Sign Up</h3>
+
+<div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="user_name" type="text" class="form-control" placeholder="Name" ng-model="ctrl.user.user_name">
+    </div>
+ 
+<br/><br/>
+
+<div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" placeholder="Password" ng-model="ctrl.user.password">
+    </div>
+ 
+<br/><br/>
+<div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="cpassword" type="password" class="form-control" placeholder="Confirm Password" ng-model="ctrl.user.cpassword">
+    </div>
+ 
+<br/><br/>
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+      <input id="email" type="text" class="form-control" placeholder="Email" ng-model="ctrl.user.email">
+    </div>
+ 
+<br/><br/>
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+      <input id="contact" type="text" class="form-control" placeholder="Contact" ng-model="ctrl.user.contact">
+    </div>
+ 
+<br/><br/>
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-briefcase"></span></span>
+      <input id="profession" type="text" class="form-control" placeholder="Profession" ng-model="ctrl.user.profession">
+    </div>
+ 
+<br/><br/>
+<div class="input-group">
+      <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+      <input id="city" type="text" class="form-control" placeholder="City" ng-model="ctrl.user.city">
+    </div>
+ 
+<br/><br/>
+
+
+
+
+<div class="row">
+<div class="form-actions">
+<input type="submit" value="Register" class="btn btn-primary btn-sm" id="button">
+<button ng-click="ctrl.reset()" class="btn btn-warning btn-sm" id="buttons">Reset Form</button>
+</div>
+</div>
+</form>
+</div>
+</div>
